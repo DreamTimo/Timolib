@@ -1,17 +1,13 @@
 package com.timo.base.base.base_fragment;
 
 import android.Manifest;
-import android.content.Intent;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Size;
-import android.text.TextUtils;
 
 import com.timo.base.R;
 import com.timo.base.tools.permissions.PermissionUtils;
 import com.timo.base.tools.permissions.permission_interface.BasePermissionInterface;
 import com.timo.base.tools.permissions.permission_interface.PermissiOnGrantedListener;
-import com.timo.base.tools.utils.RegexUtil;
 
 /**
  * Created by 45590 on 2018/7/13.
@@ -41,36 +37,6 @@ public abstract class BaseFragment extends SuperFragment implements BasePermissi
             }
         } else {
             PermissionUtils.requestPermissions(this, getString(R.string.app_name), Manifest.permission.CAMERA);
-        }
-    }
-
-    @Override
-    public void toOpenCallPhone(String phone) {
-        if (TextUtils.isEmpty(phone) || !RegexUtil.getInstance().isTel(phone)) {
-            showToast(getString(R.string.timo_error_please_edit_right_phone));
-            return;
-        }
-        this.tag_phone = phone;
-        if (PermissionUtils.hasPermissions(getActivity(), Manifest.permission.CALL_PHONE)) {
-            Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phone));
-            startActivity(intent);
-        } else {
-            PermissionUtils.requestPermissions(this, getString(R.string.timo_permission_call_phone), Manifest.permission.CALL_PHONE);
-        }
-    }
-
-    @Override
-    public void toOpenSendSms(String phone) {
-        if (TextUtils.isEmpty(phone) || !RegexUtil.getInstance().isTel(phone)) {
-            showToast(getString(R.string.timo_error_please_edit_right_phone));
-            return;
-        }
-        this.tag_phone = phone;
-        if (PermissionUtils.hasPermissions(getActivity(), Manifest.permission.SEND_SMS)) {
-            Intent intent = new Intent("android.intent.action.SENDTO", Uri.parse("smsto:" + tag_phone));
-            startActivity(intent);
-        } else {
-            PermissionUtils.requestPermissions(this, getString(R.string.timo_permission_sms), Manifest.permission.SEND_SMS);
         }
     }
 

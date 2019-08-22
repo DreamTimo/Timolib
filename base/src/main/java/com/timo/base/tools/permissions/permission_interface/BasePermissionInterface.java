@@ -18,20 +18,6 @@ public interface BasePermissionInterface {
     void toOpenCamera(PermissiOnGrantedListener listener);
 
     /**
-     * 打电话
-     *
-     * @param phone
-     */
-    void toOpenCallPhone(String phone);
-
-    /**
-     * 发短信
-     *
-     * @param phone
-     */
-    void toOpenSendSms(String phone);
-
-    /**
      * 打开外置sd卡权限
      */
     void toOpenStorage(PermissiOnGrantedListener listener);

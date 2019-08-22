@@ -8,9 +8,5 @@
         android:id="@+id/fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/transparent" />
-    <com.jcodecraeer.xrecyclerview.XRecyclerView
-        android:id="@+id/xrc"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        />
 </LinearLayout>
