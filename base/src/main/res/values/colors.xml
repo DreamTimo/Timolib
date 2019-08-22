@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="default_text_color">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#F0F0F0</color>
+    <color name="dark_gray">#aaaaaa</color>
+    <color name="transparent">#00000000</color>
+    <color name="XFrame_darker_gray">#aaaaaa</color>
+    <color name="XFrame_white">#ffffff</color>
+    <color name="XFrame_text_gray">#8a8a8a</color>
+    <color name="XFrame_loading_dialog_message">#595959</color>
+
+    <color name="text_black">#737373</color>
+    <color name="text_grey">#9DA0A3</color>
+    <color name="comment_edit_tv">#9fa0a0</color>
+    <color name="title_logo_bg_color">#EC004E</color>
+    <color name="title_logo_course_bg_color">#8C2823</color>
+    <color name="title_popup_bg_color">#70211D</color>
+</resources>

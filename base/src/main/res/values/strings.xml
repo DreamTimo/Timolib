@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Timo</string>
+    <!--权限提示-不动-->
+    <string name="timo_permission_call_phone">需要拨打电话权限</string>
+    <string name="timo_permission_sms">需要发短信权限</string>
+    <string name="timo_permission_camera">需要相机权限</string>
+    <string name="timo_permission_storage">需要存储权限</string>
+    <string name="timo_permission_calendar">需要日历权限</string>
+    <string name="timo_permission_contacts">需要联系人权限</string>
+    <string name="timo_permission_location">需要位置权限</string>
+    <string name="timo_permission_audio">需要录音权限</string>
+    <string name="timo_permission_sensors">需要传感器权限</string>
+    <string name="timo_permission_need_apply">缺少功能所需权限。</string>
+    <string name="timo_permission_to_setting">
+        缺少功能所需权限。
+        请进入设置页面开启所需权限。
+    </string>
+    <string name="timo_permission_need">权限要求</string>
+    <string name="timo_error_please_edit_right_phone">请输入正确的手机号码</string>
+
+</resources>
