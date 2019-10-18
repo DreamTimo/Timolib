@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Matrix;
 import android.media.MediaMetadataRetriever;
-import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +19,7 @@ import com.timo.base.tools.logger.AndroidLogAdapter;
 import com.timo.base.tools.logger.Logger;
 import com.timo.base.tools.utils.SPUtils;
 import com.timo.base.tools.utils.MathUtils;
+import com.timo.base.view.TitleBar;
 
 import java.io.Closeable;
 import java.io.File;
@@ -82,6 +83,42 @@ public class BaseTools {
         if (BaseConstancts.log) {
             Logger.log(Logger.ERROR, BaseConstancts.TAG, log, null);
         }
+    }
+
+    /**
+     * 设置标题
+     *
+     * @param titlebar
+     * @param title
+     * @param titleColor
+     * @param bgColor
+     * @param iconBackId
+     * @param listener
+     */
+    public static void setTitlebar(TitleBar titlebar, String title, int titleColor, int bgColor, int iconBackId, View.OnClickListener listener) {
+        titlebar.setLeftImageResource(iconBackId);
+        titlebar.setBackgroundColor(bgColor);
+        titlebar.setLeftClickListener(listener);
+        titlebar.setTitle(title);
+        titlebar.setTitleSize(17);
+        titlebar.setTitleColor(titleColor);
+    }
+
+    /**
+     * 设置标题
+     *
+     * @param titlebar
+     * @param title
+     * @param iconBackId
+     * @param listener
+     */
+    public static void setTitlebar(TitleBar titlebar, String title, int iconBackId, View.OnClickListener listener) {
+        titlebar.setLeftImageResource(iconBackId);
+        titlebar.setBackgroundColor(Color.parseColor("#f1f1f1"));
+        titlebar.setLeftClickListener(listener);
+        titlebar.setTitle(title);
+        titlebar.setTitleSize(17);
+        titlebar.setTitleColor(Color.parseColor("#333333"));
     }
 
     /**

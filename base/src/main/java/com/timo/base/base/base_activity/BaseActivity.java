@@ -23,7 +23,7 @@ public abstract class BaseActivity extends SuperActivity implements BasePermissi
                 listener.onGranted();
             }
         } else {
-            PermissionUtils.requestPermissions(this, getString(R.string.timo_permission_need_apply), perms);
+            PermissionUtils.requestPermissions(this, "缺少功能所需权限", perms);
         }
     }
 
@@ -43,7 +43,7 @@ public abstract class BaseActivity extends SuperActivity implements BasePermissi
     public void toOpenStorage(PermissiOnGrantedListener grantedListener) {
         setPermissionListener(grantedListener);
         if (!PermissionUtils.hasPermissions(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            PermissionUtils.requestPermissions(this, getString(R.string.timo_permission_storage), Manifest.permission.WRITE_EXTERNAL_STORAGE);
+            PermissionUtils.requestPermissions(this, "需要存储权限", Manifest.permission.WRITE_EXTERNAL_STORAGE);
         } else {
             if (grantedListener != null) {
                 grantedListener.onGranted();
@@ -55,7 +55,7 @@ public abstract class BaseActivity extends SuperActivity implements BasePermissi
     public void toOpenCalendar(PermissiOnGrantedListener grantedListener) {
         setPermissionListener(grantedListener);
         if (!PermissionUtils.hasPermissions(this, Manifest.permission.WRITE_CALENDAR)) {
-            PermissionUtils.requestPermissions(this, getString(R.string.timo_permission_calendar), Manifest.permission.WRITE_CALENDAR);
+            PermissionUtils.requestPermissions(this, "需要日历权限", Manifest.permission.WRITE_CALENDAR);
         } else {
             if (grantedListener != null) {
                 grantedListener.onGranted();
@@ -67,7 +67,7 @@ public abstract class BaseActivity extends SuperActivity implements BasePermissi
     public void toOpenContacts(PermissiOnGrantedListener grantedListener) {
         setPermissionListener(grantedListener);
         if (!PermissionUtils.hasPermissions(this, Manifest.permission.WRITE_CONTACTS)) {
-            PermissionUtils.requestPermissions(this, getString(R.string.timo_permission_contacts), Manifest.permission.WRITE_CONTACTS);
+            PermissionUtils.requestPermissions(this, "需要联系人权限", Manifest.permission.WRITE_CONTACTS);
         } else {
             if (grantedListener != null) {
                 grantedListener.onGranted();
@@ -79,7 +79,7 @@ public abstract class BaseActivity extends SuperActivity implements BasePermissi
     public void toOpenLocation(PermissiOnGrantedListener grantedListener) {
         setPermissionListener(grantedListener);
         if (!PermissionUtils.hasPermissions(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
-            PermissionUtils.requestPermissions(this, getString(R.string.timo_permission_location), Manifest.permission.ACCESS_FINE_LOCATION);
+            PermissionUtils.requestPermissions(this, "需要位置权限", Manifest.permission.ACCESS_FINE_LOCATION);
         } else {
             if (grantedListener != null) {
                 grantedListener.onGranted();
@@ -91,7 +91,7 @@ public abstract class BaseActivity extends SuperActivity implements BasePermissi
     public void toOpenAudio(PermissiOnGrantedListener grantedListener) {
         setPermissionListener(grantedListener);
         if (!PermissionUtils.hasPermissions(this, Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            PermissionUtils.requestPermissions(this, getString(R.string.timo_permission_audio), Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+            PermissionUtils.requestPermissions(this, "需要录音权限", Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         } else {
             if (grantedListener != null) {
                 grantedListener.onGranted();
@@ -103,7 +103,7 @@ public abstract class BaseActivity extends SuperActivity implements BasePermissi
     public void toOpenSensors(PermissiOnGrantedListener grantedListener) {
         setPermissionListener(grantedListener);
         if (!PermissionUtils.hasPermissions(this, Manifest.permission.BODY_SENSORS)) {
-            PermissionUtils.requestPermissions(this, getString(R.string.timo_permission_sensors), Manifest.permission.BODY_SENSORS);
+            PermissionUtils.requestPermissions(this, "需要传感器权限", Manifest.permission.BODY_SENSORS);
         } else {
             if (grantedListener != null) {
                 grantedListener.onGranted();

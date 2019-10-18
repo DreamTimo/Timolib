@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.timo.base.base.BaseConstancts;
 import com.timo.base.tools.permissions.PermissionUtils;
 import com.timo.base.tools.permissions.permission_interface.PermissiOnGrantedListener;
-import com.timo.base.tools.StatusBarCompat;
+import com.timo.base.view.StatusBarUtils;
 
 import java.io.Serializable;
 
@@ -27,7 +27,7 @@ public abstract class SuperActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        StatusBarCompat.translucentStatusBar(this);
+        StatusBarUtils.translucentStatusBar(this);
         setContentView(getContentResId());
         initEvent();
         initEvent(savedInstanceState);

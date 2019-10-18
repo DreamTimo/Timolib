@@ -1,4 +1,4 @@
-package com.timo.base.tools;
+package com.timo.base.view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -16,7 +16,7 @@ import android.widget.FrameLayout;
  * Utils for status bar
  * Created by qiu on 3/29/16.
  */
-public class StatusBarCompat {
+public class StatusBarUtils {
 
     private static final int COLOR_TRANSLUCENT = Color.parseColor("#00000000");
 

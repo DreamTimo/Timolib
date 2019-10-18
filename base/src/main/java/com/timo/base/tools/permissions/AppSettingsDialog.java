@@ -43,14 +43,14 @@ public class AppSettingsDialog implements Parcelable {
     static final String EXTRA_APP_SETTINGS = "extra_app_settings";
 
     @StyleRes
-    private final int mThemeResId;
+    private final int    mThemeResId;
     private final String mRationale;
     private final String mTitle;
     private final String mPositiveButtonText;
     private final String mNegativeButtonText;
-    private final int mRequestCode;
+    private final int    mRequestCode;
 
-    private Object mActivityOrFragment;
+    private Object  mActivityOrFragment;
     private Context mContext;
 
     private AppSettingsDialog(Parcel in) {
@@ -156,7 +156,7 @@ public class AppSettingsDialog implements Parcelable {
      */
     public static class Builder {
 
-        private final Object mActivityOrFragment;
+        private final Object  mActivityOrFragment;
         private final Context mContext;
         @StyleRes
         private int mThemeResId = -1;
@@ -304,9 +304,9 @@ public class AppSettingsDialog implements Parcelable {
         @NonNull
         public AppSettingsDialog build() {
             mRationale = TextUtils.isEmpty(mRationale) ?
-                    mContext.getString(R.string.timo_permission_to_setting) : mRationale;
+                    "缺少功能所需权限,请进入设置页面开启所需权限。" : mRationale;
             mTitle = TextUtils.isEmpty(mTitle) ?
-                    mContext.getString(R.string.timo_permission_need) : mTitle;
+                    "timo_permission_need" : mTitle;
             mPositiveButtonText = TextUtils.isEmpty(mPositiveButtonText) ?
                     mContext.getString(android.R.string.ok) : mPositiveButtonText;
             mNegativeButtonText = TextUtils.isEmpty(mNegativeButtonText) ?

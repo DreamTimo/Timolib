@@ -23,12 +23,12 @@ import java.util.Arrays;
  */
 public final class PermissionRequest {
     private final PermissionHelper mHelper;
-    private final String[] mPerms;
-    private final int mRequestCode;
-    private final String mRationale;
-    private final String mPositiveButtonText;
-    private final String mNegativeButtonText;
-    private final int mTheme;
+    private final String[]         mPerms;
+    private final int              mRequestCode;
+    private final String           mRationale;
+    private final String           mPositiveButtonText;
+    private final String           mNegativeButtonText;
+    private final int              mTheme;
 
     private PermissionRequest(PermissionHelper helper,
                               String[] perms,
@@ -118,8 +118,8 @@ public final class PermissionRequest {
      */
     public static final class Builder {
         private final PermissionHelper mHelper;
-        private final int mRequestCode;
-        private final String[] mPerms;
+        private final int              mRequestCode;
+        private final String[]         mPerms;
 
         private String mRationale;
         private String mPositiveButtonText;
@@ -167,7 +167,6 @@ public final class PermissionRequest {
          * at least once, but has not yet permanently denied your permissions. Should the user
          * permanently deny your permissions, use the {@link AppSettingsDialog} instead.
          * <p>
-         * The default rationale text is {@link R.string#timo_permission_need_apply}.
          *
          * @param rationale the rationale to be displayed to the user should they deny your
          *                  permission at least once
@@ -249,7 +248,7 @@ public final class PermissionRequest {
         @NonNull
         public PermissionRequest build() {
             if (mRationale == null) {
-                mRationale = mHelper.getContext().getString(R.string.timo_permission_need_apply);
+                mRationale = "缺少功能所需权限";
             }
             if (mPositiveButtonText == null) {
                 mPositiveButtonText = mHelper.getContext().getString(android.R.string.ok);

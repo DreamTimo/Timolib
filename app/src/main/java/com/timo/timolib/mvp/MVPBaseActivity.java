@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.timo.base.base.base_activity.BaseActivity;
+
 import java.lang.reflect.ParameterizedType;
 
 
