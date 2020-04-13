@@ -1,0 +1,4 @@
+-keep class com.timo.trecyclerview.BaseAdapter{*;}
+-keep class com.timo.trecyclerview.BaseAdapterTools{*;}
+-keep class com.timo.trecyclerview.base.ViewHolder{*;}
+-ignorewarnings

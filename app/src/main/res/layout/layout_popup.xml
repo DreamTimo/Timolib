@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~    Copyright (C) 2019  安讯达盛（北京）科技有限公司  htttp://www.aksofy.com
+  ~    File: layout_popup.xml
+  ~    Current modification time: 2019年11月18日 11:40:34
+  ~    Last modified:2019年11月18日 11:38:07
+  ~    Author:2019 - 2020 gaoyanan
+  ~    Author:2019 - 2020 wangjun
+  ~    Email:aksofy18600030126@163.com
+  ~    Tell: 65842871
+  -->
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_50"
+        android:orientation="vertical"
+        android:background="@drawable/popup_topshape"
+        tools:ignore="UselessParent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pleaseselect"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/type_16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/color_e5" />
+        <com.bigkoo.pickerview.lib.WheelView
+            android:id="@+id/wheelView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_300"
+          />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/color_e5" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50">
+            <TextView
+                android:id="@+id/tv_patientdetailcancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/type_15sp"
+                android:text="取消"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="@color/color_e5" />
+            <TextView
+                android:id="@+id/tv_patientdetailsure"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@color/color_darkblue"
+                android:gravity="center"
+                android:textSize="@dimen/type_15sp"
+                android:text="确定"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

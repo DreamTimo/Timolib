@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">测试app</string>
+
+
+    <string name="case_hitory">病案复印</string>
+    <string name="pleaseselect">请选择</string>
+
 </resources>

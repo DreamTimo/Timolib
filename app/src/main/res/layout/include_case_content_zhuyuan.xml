@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_copy_choice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/image_25"
+        android:layout_marginRight="@dimen/image_25"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@mipmap/case_open"
+        android:drawablePadding="5dp"
+        android:text="住院"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/type_12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/img_10"
+        android:layout_marginRight="@dimen/img_10"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_case_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="住院科室"
+                android:textColor="@color/gray_te"
+                android:textSize="@dimen/type_14sp" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="请填写住院科室"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="@dimen/type_14sp" />
+        </LinearLayout>
+
+        <View
+            style="@style/line"
+            android:layout_marginTop="@dimen/dp_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="出院日期"
+                android:textColor="@color/gray_te"
+                android:textSize="@dimen/type_14sp" />
+
+            <TextView
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="请选择>>"
+                android:textColor="@color/gray_te"
+                android:textSize="@dimen/type_14sp" />
+        </LinearLayout>
+
+        <View
+            style="@style/line"
+            android:layout_marginTop="@dimen/dp_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/img_14"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_box"
+                android:drawablePadding="10dp"
+                android:text="病案首页"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/img_13"
+                tools:ignore="RtlHardcoded" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/img_14"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_box"
+                android:drawablePadding="10dp"
+                android:text="住院志(即入院记录)"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/img_13"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+
+        <View
+            style="@style/line"
+            android:layout_marginTop="@dimen/dp_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/img_14"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_box"
+                android:drawablePadding="10dp"
+                android:text="体温单"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/img_13"
+                tools:ignore="RtlHardcoded" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/img_14"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_box"
+                android:drawablePadding="10dp"
+                android:text="医嘱单"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/img_13"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+
+        <View
+            style="@style/line"
+            android:layout_marginTop="@dimen/dp_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/img_14"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_box"
+                android:drawablePadding="10dp"
+                android:text="化验单(检查报告)"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/img_13"
+                tools:ignore="RtlHardcoded" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/img_14"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_box"
+                android:drawablePadding="10dp"
+                android:text="医学影像学检查资料"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/img_13"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+
+        <View
+            style="@style/line"
+            android:layout_marginTop="@dimen/dp_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/img_14"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_box"
+                android:drawablePadding="10dp"
+                android:text="特殊检查同意书"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/img_13"
+                tools:ignore="RtlHardcoded" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/img_14"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_box"
+                android:drawablePadding="10dp"
+                android:text="手术及麻醉记录单"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/img_13"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+
+        <View
+            style="@style/line"
+            android:layout_marginTop="@dimen/dp_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/img_14"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_box"
+                android:drawablePadding="10dp"
+                android:text="病理报告"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/img_13"
+                tools:ignore="RtlHardcoded" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/img_14"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_box"
+                android:drawablePadding="10dp"
+                android:text="护理记录"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/img_13"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+
+        <View
+            style="@style/line"
+            android:layout_marginTop="@dimen/dp_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="@dimen/img_10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/img_14"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_box"
+                android:drawablePadding="10dp"
+                android:text="出院记录"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/img_13"
+                tools:ignore="RtlHardcoded" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/img_14"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_box"
+                android:drawablePadding="10dp"
+                android:text="其他"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/img_13"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/add_case"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_case_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="添加既往住院病历"
+        android:textColor="@color/color_darkblue"
+        android:textSize="13sp" />
+</LinearLayout>

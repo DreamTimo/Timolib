@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_qian"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical">
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_66"
+        titlebar:centerText="@string/case_hitory"
+        titlebar:centerTextColor="@color/white"
+        titlebar:centerType="textView"
+        titlebar:fillStatusBar="true"
+        titlebar:leftImageResource="@mipmap/back"
+        titlebar:leftType="imageButton"
+        titlebar:statusBarColor="@color/color_007"
+        titlebar:titleBarColor="@color/color_007"
+        titlebar:titleBarHeight="@dimen/image_65" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_40"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/image_25"
+                android:paddingRight="@dimen/image_25">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前就诊人："
+                    android:textColor="@color/alphablack"
+                    android:textSize="@dimen/type_14sp" />
+
+                <TextView
+                    android:id="@+id/check_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="刘刚强"
+                    android:textColor="@color/color_007"
+                    android:textSize="@dimen/type_14sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/case_status_2" />
+
+            <include layout="@layout/include_case_sick_message" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/image_25"
+                android:paddingRight="@dimen/image_25">
+
+                <TextView
+                    android:layout_width="@dimen/image_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="就诊人身份证(正面)"
+                    android:textColor="@color/gray_te"
+                    android:textSize="@dimen/type_14sp" />
+
+                <TextView
+                    android:id="@+id/tv_choice_pic_0"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/shape_choice_pic"
+                    android:gravity="center"
+                    android:text="上传照片"
+                    android:textColor="@color/color_darkblue"
+                    android:textSize="@dimen/type_12sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_type"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="@dimen/image_25"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="TODO"
+                        android:src="@mipmap/line_blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/image_4"
+                        android:text="经办人信息"
+                        android:textColor="@color/oder_black"
+                        android:textSize="@dimen/type_15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="@dimen/image_25"
+                    android:paddingRight="@dimen/image_25"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/image_0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="经办人姓名"
+                            android:textColor="@color/gray_te"
+                            android:textSize="@dimen/type_14sp" />
+
+                        <EditText
+                            android:id="@+id/et_name_agent"
+                            android:layout_width="@dimen/image_0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:hint="请填写经办人姓名"
+                            android:maxLength="8"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textCursorDrawable="@drawable/cursor_color"
+                            android:textSize="@dimen/type_14sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/line"
+                        android:layout_marginTop="@dimen/dp_10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/image_0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="经办人电话"
+                            android:textColor="@color/gray_te"
+                            android:textSize="@dimen/type_14sp" />
+
+                        <EditText
+                            android:id="@+id/et_phone_agent"
+                            android:layout_width="@dimen/image_0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:hint="请填写经办人电话"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textCursorDrawable="@drawable/cursor_color"
+                            android:textSize="@dimen/type_14sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/line"
+                        android:layout_marginTop="@dimen/dp_10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/image_0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="经办人身份证(正面)"
+                            android:textColor="@color/gray_te"
+                            android:textSize="@dimen/type_14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_choice_pic_agent_1"
+                            android:layout_width="60dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/shape_choice_pic"
+                            android:gravity="center"
+                            android:text="上传照片"
+                            android:textColor="@color/color_darkblue"
+                            android:textSize="@dimen/type_12sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/line"
+                        android:layout_marginTop="@dimen/dp_10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/image_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:text="委托书"
+                            android:textColor="@color/gray_te"
+                            android:textSize="@dimen/type_14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_choice_pic_agent_2"
+                            android:layout_width="60dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/shape_choice_pic"
+                            android:gravity="center"
+                            android:text="上传照片"
+                            android:textColor="@color/color_darkblue"
+                            android:textSize="@dimen/type_12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_download"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="点击下载《委托书模版》打印后手工签字拍照上传，或依模版格式内容自行书写拍照上传。"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/type_12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/include_case__apply_message" />
+            <include layout="@layout/include_case_content_menzhen" />
+            <include layout="@layout/include_case_content_zhuyuan" />
+
+            <Button
+                android:id="@+id/bt_confirm"
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/img_10"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/select_25"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

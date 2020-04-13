@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/image_25"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:src="@mipmap/line_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/image_4"
+            android:text="就诊人信息"
+            android:textColor="@color/oder_black"
+            android:textSize="@dimen/type_15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/image_25"
+        android:paddingRight="@dimen/image_25"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="姓名"
+                android:textColor="@color/gray_te"
+                android:textSize="@dimen/type_14sp" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="请填写姓名"
+                android:maxLength="8"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="@dimen/type_14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="性别"
+                android:textColor="@color/gray_te"
+                android:textSize="@dimen/type_14sp" />
+
+            <EditText
+                android:id="@+id/et_sex"
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="请填写性别"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="@dimen/type_14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="身份证号"
+                android:textColor="@color/gray_te"
+                android:textSize="@dimen/type_14sp" />
+
+            <EditText
+                android:id="@+id/et_idnum"
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="请填写身份证号"
+                android:maxLength="18"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="@dimen/type_14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="病案号"
+                android:textColor="@color/gray_te"
+                android:textSize="@dimen/type_14sp" />
+
+            <EditText
+                android:id="@+id/et_case_code"
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="请填写病案号"
+                android:maxLength="18"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="@dimen/type_14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="患者年龄"
+                android:textColor="@color/gray_te"
+                android:textSize="@dimen/type_14sp" />
+
+            <EditText
+                android:id="@+id/et_age"
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="请填写患者年龄"
+                android:inputType="number"
+                android:maxLength="3"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="@dimen/type_14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

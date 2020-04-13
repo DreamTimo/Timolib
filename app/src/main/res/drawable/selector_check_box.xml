@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~    Copyright (C) 2019  安讯达盛（北京）科技有限公司  htttp://www.aksofy.com
+  ~    File: selector_check_box.xml
+  ~    Current modification time: 2019年11月18日 11:40:35
+  ~    Last modified:2019年11月18日 11:38:07
+  ~    Author:2019 - 2020 gaoyanan
+  ~    Author:2019 - 2020 wangjun
+  ~    Email:aksofy18600030126@163.com
+  ~    Tell: 65842871
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@mipmap/button_ckecked" />
+    <item android:state_checked="false" android:drawable="@mipmap/button_unckecked" />
+</selector>

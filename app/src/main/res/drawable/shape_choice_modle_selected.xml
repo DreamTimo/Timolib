@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~    Copyright (C) 2019  安讯达盛（北京）科技有限公司  htttp://www.aksofy.com
+  ~    File: agreepay_finish_shape.xml
+  ~    Current modification time: 2019年11月18日 11:40:35
+  ~    Last modified:2019年11月18日 11:38:07
+  ~    Author:2019 - 2020 gaoyanan
+  ~    Author:2019 - 2020 wangjun
+  ~    Email:aksofy18600030126@163.com
+  ~    Tell: 65842871
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke
+        android:width="1dp"
+        android:color="@color/color_darkblue" />
+    <corners android:radius="3dp" />
+    <solid android:color="#E5F1F5" />
+</shape>

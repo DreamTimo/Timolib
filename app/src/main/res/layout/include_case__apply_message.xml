@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/image_25"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:src="@mipmap/line_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/image_4"
+            android:text="申请信息"
+            android:textColor="@color/oder_black"
+            android:textSize="@dimen/type_15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/image_25"
+        android:paddingRight="@dimen/image_25"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="联系电话"
+                android:textColor="@color/gray_te"
+                android:textSize="@dimen/type_14sp" />
+
+            <EditText
+                android:id="@+id/et_message_phone"
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="请填写就诊人电话"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="@dimen/type_14sp" />
+        </LinearLayout>
+
+        <View
+            style="@style/line"
+            android:layout_marginTop="@dimen/dp_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="申请目的"
+                android:textColor="@color/gray_te"
+                android:textSize="@dimen/type_14sp" />
+
+            <EditText
+                android:id="@+id/et_goal"
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="请填写申请目的"
+                android:maxLength="8"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="@dimen/type_14sp" />
+        </LinearLayout>
+
+        <View
+            style="@style/line"
+            android:layout_marginTop="@dimen/dp_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/image_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="复印份数"
+                android:textColor="@color/gray_te"
+                android:textSize="@dimen/type_14sp" />
+
+            <TextView
+                android:id="@+id/tv_choice_count"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="请选择>>"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/type_12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

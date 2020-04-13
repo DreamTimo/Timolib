@@ -1,38 +1,43 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+/*
+ *    Copyright (C) 2019  安讯达盛（北京）科技有限公司  htttp://www.aksofy.com
+ *    File: build.gradle
+ *    Current modification time: 2019年11月18日 11:40:36
+ *    Last modified:2019年11月18日 11:38:11
+ *    Author:2019 - 2020 gaoyanan
+ *    Author:2019 - 2020 wangjun
+ *    Email:aksofy18600030126@163.com
+ *    Tell: 65842871
+ */
 
+/*
+ */
+
+/*
+ */
+
+/*
+ */
+
+apply plugin: 'com.android.library'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.timo.timolib"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
-        multiDexEnabled true
+        multiDexEnabled false
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
-
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.google.code.gson:gson:2.8.4'
     implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation project(':base')
-    implementation project(':base_recyclerview')
-//    implementation files('libs/base.jar')
-//    implementation 'com.github.DreamTimo:Timolib:V1.0.3'
-    implementation 'com.wuhenzhizao:titlebar:1.1.4'
     implementation 'com.jcodecraeer:xrecyclerview:1.5.9'
     implementation 'com.android.support:design:28.0.0-alpha1'
-    implementation 'com.contrarywind:Android-PickerView:3.2.4'
-
-
 }
