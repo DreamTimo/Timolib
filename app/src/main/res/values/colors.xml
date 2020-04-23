@@ -19,5 +19,12 @@
     <color name="color_e5">#E5E5E5</color>
     <color name="color_darkblue">#00799F</color>
     <color name="color_de">#dedede</color>
+    <color name="black">#000000</color>
+    <color name="gray_gb">#dddddd</color>
+    <color name="grayc4">#c4c4c4</color>
+    <color name="graye3">#e3e7ee</color>
+    <color name="alipay">#00a5ff</color>
+    <color name="gray_e5">#e5e5e5</color>
+    <color name="transparent">#00000000</color>
 
 </resources>

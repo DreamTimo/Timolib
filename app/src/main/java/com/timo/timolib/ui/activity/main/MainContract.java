@@ -1,5 +1,7 @@
 package com.timo.timolib.ui.activity.main;
 
+import android.content.Context;
+
 import com.timo.timolib.mvp.BasePresenter;
 import com.timo.timolib.mvp.BaseView;
 
@@ -15,5 +17,6 @@ public class MainContract {
 
     interface  Presenter extends BasePresenter<View> {
         void passJson();
+        void showDialog();
     }
 }

@@ -1,15 +1,12 @@
 package com.timo.timolib.ui.activity.main
 
-import android.app.Activity
+import android.util.Log
 import android.view.View
 import com.timo.timolib.R
+import com.timo.timolib.inter.OnPayPassClickListener
 import com.timo.timolib.mvp.MVPBaseActivity
-import com.timo.timolib.ui.activity.case_history_copy.casehistory.CaseHistoryActivity
-import com.timo.timolib.ui.activity.case_history_copy.identitychcek.IdentityChcekActivity
+import com.timo.timolib.view.pin.PayPassDialog
 import kotlinx.android.synthetic.main.activity_main.*
-import android.content.ComponentName
-import android.content.Intent
-import com.timo.timolib.ui.activity.new_history_copy.addhistoryidcard.AddhistoryidcardActivity
 
 
 /**
@@ -20,35 +17,77 @@ import com.timo.timolib.ui.activity.new_history_copy.addhistoryidcard.Addhistory
 class MainActivity : MVPBaseActivity<MainContract.View, MainPresenter>(), MainContract.View, View.OnClickListener {
     override fun onClick(view: View?) {
         when (view!!.id) {
-            R.id.bt_case_history -> {
-                val intent = Intent()
-                intent.component = ComponentName("com.abc.iddecode", "com.abc.iddecode.MainActivity")
-                startActivityForResult(intent, 1001)
+            R.id.ll_edit -> {
+                var dialog = PayPassDialog(context)
+                dialog.setListener(object : OnPayPassClickListener {
+                    override fun onKeyDown(key: String?) {
+                        if (data!!.size < 5 && key == "X") {
+                            return
+                        }
+
+                        if (data!!.size < 6) {
+                            data!!.add(key!!)
+                        }
+                        setKey()
+                        if (data!!.size >= 6) {
+                            dialog.dismiss()
+                            var sb = StringBuffer()
+                            data!!.forEach { a ->
+                                sb.append(a)
+                            }
+                            showToast("获取结果：" + sb.toString())
+                        }
+                    }
+
+                    override fun onDelete() {
+                        if (data!!.size >= 1) {
+                            data!!.removeAt(data!!.size - 1)
+                        }
+                        setKey()
+                    }
+
+                    override fun onPayClose() {
+                        dialog.dismiss()
+                    }
+                })
             }
-            R.id.bt_case_history -> {
-                startActivityAddFinish(AddhistoryidcardActivity::class.java)
-//                val intent = Intent()
-//                intent.component = ComponentName("com.abc.iddecode", "com.abc.iddecode.MainActivity")
-//                startActivityForResult(intent, 1001)
+        }
+    }
+
+    private fun setKey() {
+        tv_1.text = ""
+        tv_2.text = ""
+        tv_3.text = ""
+        tv_4.text = ""
+        tv_5.text = ""
+        tv_6.text = ""
+        data!!.forEachIndexed { position, data ->
+            when (position) {
+                0 -> {
+                    tv_1.text = data
+                }
+                1 -> {
+                    tv_2.text = data
+                }
+                2 -> {
+                    tv_3.text = data
+                }
+                3 -> {
+                    tv_4.text = data
+                }
+                4 -> {
+                    tv_5.text = data
+                }
+                5 -> {
+                    tv_6.text = data
+                }
             }
         }
     }
 
     override fun getContentResId(): Int = R.layout.activity_main
-
+    var data: ArrayList<String>? = ArrayList()
     override fun initEvent() {
-        bt_case_history.setOnClickListener(this)
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 1001) {
-            if (resultCode == Activity.RESULT_OK) {
-                tv_message.text = data!!.getStringExtra("id_info")
-            } else if (resultCode == Activity.RESULT_CANCELED) {
-                showToast("取消操作")
-                tv_message.text = "点击了取消按钮"
-            }
-        }
+        ll_edit.setOnClickListener(this)
     }
 }

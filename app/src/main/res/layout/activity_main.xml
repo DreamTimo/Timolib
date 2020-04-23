@@ -4,41 +4,129 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <ScrollView
+
+    <LinearLayout
+        android:id="@+id/ll_edit"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none">
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
 
-            <Button
-                android:id="@+id/bt_case_history"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_margin="30dp"
-                android:gravity="center"
-                android:text="身份解码APP调用" />
-            <Button
-                android:id="@+id/bt_case_new"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_margin="30dp"
-                android:gravity="center"
-                android:text="新建病案" />
             <TextView
-                android:id="@+id/tv_message"
+                android:id="@+id/tv_1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:textColor="#333333"
-                android:textSize="12sp" />
-        </LinearLayout>
-    </ScrollView>
+                android:gravity="center"
+                android:textSize="@dimen/type_35sp"
+                android:textStyle="bold" />
 
+            <View
+                style="@style/line"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/type_35sp"
+                android:textStyle="bold" />
+
+            <View
+                style="@style/line"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/type_35sp"
+                android:textStyle="bold" />
+
+            <View
+                style="@style/line"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/type_35sp"
+                android:textStyle="bold" />
+
+            <View
+                style="@style/line"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/type_35sp"
+                android:textStyle="bold" />
+
+            <View
+                style="@style/line"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/type_35sp"
+                android:textStyle="bold" />
+
+            <View
+                style="@style/line"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

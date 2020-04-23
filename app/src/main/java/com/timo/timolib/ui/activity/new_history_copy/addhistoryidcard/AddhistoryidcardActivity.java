@@ -1,6 +1,7 @@
 package com.timo.timolib.ui.activity.new_history_copy.addhistoryidcard;
 
 
+import com.timo.timolib.R;
 import com.timo.timolib.mvp.MVPBaseActivity;
 
 
